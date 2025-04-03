@@ -1,6 +1,6 @@
+import 'package:basics/oop/person.dart';
+
 void main() {
-  String message = "ts opened hella fast!";
-  for (int i = 0; i < 10; i++) {
-    print(message);
-  }
+  Person pp = Person(firstName: "Nnaemeka", lastName: "Onyeokoro", age: 23);
+  pp.desc();
 }
