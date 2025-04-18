@@ -1,0 +1,5 @@
+Soon as I am done with this flutter course we're going straight to building projects.
+
+Gonna build like 3-5 mobile apps in a hackathon style to make sure I know what I'm doing.
+
+From there, we're gonna start building more advanced applications and integrating AI into them.
