@@ -1,6 +1,8 @@
+import 'dart:isolate';
+
 void randomStuff() {
   // here's how u create a fixed size list , essentially an array:
-  final List<int> fixedSizeList = List.filled(4, 0);
+  // final List<int> fixedSizeList = List.filled(4, 0);
   // fixedSizeList.add(10); // this operation will fail!
 }
 
@@ -29,6 +31,35 @@ bool binarySearch(List<int> nums, int target) {
   return false;
 }
 
+// given 2 arrays, return a new array with even numbers from both arrays
+// order doesn't matter for now
+List<int> findEvenNums(List<int> arr1, List<int> arr2) {
+  List<int> result = [];
+  for (int element in arr1) {
+    if (element % 2 == 0) {
+      result.add(element);
+    }
+  }
+  for (int element in arr2) {
+    if (element % 2 == 0) {
+      result.add(element);
+    }
+  }
+  return result;
+}
+
+void reverseInPlace(List<int> arr) {
+  int start = 0;
+  int end = arr.length - 1;
+  while (start < end) {
+    int temp = arr[start];
+    arr[start] = arr[end];
+    arr[end] = temp;
+    start++;
+    end--;
+  }
+}
+
 void main() {
   List<int> list1 = [1, 3, 5, 7, 9];
   List<int> list2 = [2, 4, 6, 8, 10, 12];
@@ -36,7 +67,10 @@ void main() {
   List<List<int>> tests = [list1, list2, list3];
   List<int> targets = [1, 12, 41];
 
-  for (int i = 0; i < tests.length; i++) {
-    print(binarySearch(tests[i], targets[i]));
-  }
+  // for (int i = 0; i < tests.length; i++) {
+  //   print(binarySearch(tests[i], targets[i]));
+  // }
+  List<int> toReverse = [2, 4, 6, 8, 10, 12];
+  reverseInPlace(toReverse);
+  print(toReverse);
 }
