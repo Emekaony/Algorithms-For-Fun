@@ -55,7 +55,7 @@ class LinkedList<T> {
   void display() {
     LinkedListNode<T>? curr = this.head;
     while (curr != null) {
-      print("${curr.data}");
+      print(curr.data);
       curr = curr.next;
     }
   }
