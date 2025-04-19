@@ -1,4 +1,6 @@
 // this will be the Node
+import 'dart:io';
+
 class LinkedListNode<T> {
   T data;
   // next could be null so make it optional
@@ -54,10 +56,13 @@ class LinkedList<T> {
 
   void display() {
     LinkedListNode<T>? curr = this.head;
+    String arrow = '->';
     while (curr != null) {
-      print(curr.data);
+      stdout.write("${curr.data} ${curr.next != null ? arrow : ''} ");
+      // print(curr.data);
       curr = curr.next;
     }
+    stdout.writeln();
   }
 
   int length() {
