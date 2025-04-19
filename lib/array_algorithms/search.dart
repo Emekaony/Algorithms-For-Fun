@@ -1,5 +1,3 @@
-import 'dart:isolate';
-
 void randomStuff() {
   // here's how u create a fixed size list , essentially an array:
   // final List<int> fixedSizeList = List.filled(4, 0);
@@ -73,10 +71,10 @@ List<int> rotateArray(List<int> arr) {
 
 void main() {
   List<int> list1 = [1, 3, 5, 7, 9];
-  List<int> list2 = [2, 4, 6, 8, 10, 12];
-  List<int> list3 = [5, 12, 18, 23, 37, 41, 59, 63, 72, 88, 97];
-  List<List<int>> tests = [list1, list2, list3];
-  List<int> targets = [1, 12, 41];
+  // List<int> list2 = [2, 4, 6, 8, 10, 12];
+  // List<int> list3 = [5, 12, 18, 23, 37, 41, 59, 63, 72, 88, 97];
+  // List<List<int>> tests = [list1, list2, list3];
+  // List<int> targets = [1, 12, 41];
 
   // B-search
   // for (int i = 0; i < tests.length; i++) {
